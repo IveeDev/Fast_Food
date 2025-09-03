@@ -1,3 +1,4 @@
+import CardButton from "@/components/CardButton";
 import { images, offers } from "@/constants";
 import cn from "clsx";
 import {
@@ -76,7 +77,7 @@ export default function Index() {
               </TouchableOpacity>
             </View>
 
-            <Text>Cart</Text>
+            <CardButton />
           </View>
         )}
       />
