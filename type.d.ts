@@ -17,9 +17,16 @@ export interface Category extends Models.Document {
 }
 
 export interface User extends Models.Document {
-  name: string;
+  $id: string;
+  $collectionId: string;
+  $databaseId: string;
+  $createdAt: string;
+  $updatedAt: string;
+  $permissions: string[];
+  $sequence: number; // Add $sequence as a number
+  name?: string;
   email: string;
-  avatar: string;
+  avatar?: string;
 }
 
 export interface CartCustomization {
@@ -90,7 +97,7 @@ interface ProfileFieldProps {
   icon: ImageSourcePropType;
 }
 
-interface CreateUserPrams {
+interface CreateUserParams {
   email: string;
   password: string;
   name: string;
